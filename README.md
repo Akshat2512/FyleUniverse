@@ -5,6 +5,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Unit Tests Coverage Report
 
 !Coverage
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h1>HTML in SVG</h1>
+      <p>This is an example of embedding HTML within an SVG.</p>
+    </div>
+  </foreignObject>
+</svg>
 
 ## Development server
 
