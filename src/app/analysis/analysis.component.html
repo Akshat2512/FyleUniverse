@@ -1,0 +1,18 @@
+<section class="shadow-lg flex flex-row gap-4 p-5 bg-gray-100 rounded-[10px]">
+    <mat-card class="drop-shadow-lg p-4 w-[30%] h-fit" >
+            @for (name of names; track name) {
+            <mat-divider></mat-divider>
+            <label class="duration-500 hover:bg-gray-200 has-[:checked]:bg-gray-300 has-[:checked]:font-semibold has-[:checked]:ring-black-800 w-[100%] py-[10px] pl-[10px]">
+                <input type="radio" [formControl] = 'select' class="appearance-none"  (click)="onSelection(name)" name="username" [value]="name"/>
+                {{name}}
+            </label>
+        }
+        <mat-divider></mat-divider>
+          
+    </mat-card>
+ 
+    <mat-card class="drop-shadow-xl w-[70%]">
+        <div class="text-2xl font-semibold absolute my-[40px] mx-[10px]">{{this.service.heading}}</div>
+        <p-chart type="bar"  [data]="basicData" height="400px" width="90%" [options]="basicOptions" />
+    </mat-card>
+</section>

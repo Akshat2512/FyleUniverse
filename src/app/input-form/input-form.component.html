@@ -1,0 +1,26 @@
+<!-- flex flex-col items-center justify-center -->
+<form #woutForm = "ngForm" (ngSubmit)="onSubmit(woutForm.value)" class="grid grid-cols-2-[50px_auto] gap-6">
+    <mat-form-field class="row-start-1">
+      <mat-label>User Name</mat-label>
+      <input matInput type="text" name="name" ngModel placeholder="Enter" required/>
+    </mat-form-field>
+  
+    <mat-form-field class="row-start-2">
+        <mat-label>Workout Type</mat-label>
+        <mat-select name="workout_type" ngModel required>
+          @for (workout of wout_List; track workout) {
+            <mat-option [value]="workout">{{workout}}</mat-option>
+          }
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="row-start-2">
+        <mat-label>Workout Minutes</mat-label>
+        <input matInput type="number" name="minutes" ngModel required/>
+    </mat-form-field>
+    
+    <section class="row-start-3">
+    <button mat-raised-button type="submit"><span class="text-blue-600 font-bold">Add Workout</span></button>
+    </section>
+
+  </form>

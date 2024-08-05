@@ -1,29 +1,60 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormType } from './wo-table';
 
 describe('AppComponent', () => {
+
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+        imports: [AppComponent, BrowserAnimationsModule],
     }).compileComponents();
   });
-
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
-  it(`should have the 'Fyleuniverse' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('Fyleuniverse');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+  
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Fyleuniverse');
   });
+
+  it('should create the workout app', () => {
+
+    expect(component).toBeTruthy();
+  });
+
+  it(`should render input-form`, () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('app-input-form')).not.toBeNull();
+  });
+
+  it('should render search-form', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('app-search')).not.toBeNull();
+  });
+
+  it('should render analysis-form', () => {
+
+    //Arrange
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('app-analysis')).not.toBeNull();
+  });
+
+  it('should recieve data from input-form', ()=>{
+    //Arrange
+    const newData = {
+      name:'Akshat',
+      workout_type:'Running',
+      minutes:4
+    };
+    
+    //Act
+    component.receiveData(newData);
+
+    //Assert
+    expect(component.tableData).toEqual(newData);
+  })
+
 });
