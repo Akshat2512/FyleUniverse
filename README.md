@@ -4,8 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Unit Tests Coverage Report
 
-!Coverage
-<iframe href="https://akshat2512.github.io/Fyleuniverse/coverage/fyleuniverse/"></iframe>
+![View Coverage Report]("https://akshat2512.github.io/Fyleuniverse/coverage/fyleuniverse/")
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
