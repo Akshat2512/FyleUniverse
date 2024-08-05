@@ -26,13 +26,13 @@ export class AppComponent{
   
   receiveData(newData: FormType)  // Recieve Data from 'input-form' component and update tableData
   {
-    console.log('Received new form data:', newData);
+
     this.tableData = newData; 
   }
 
    updateGraphData(newData: CoTable[])  // Recieve Data from 'search-form' component and update graphData
    {
-    console.log('Received Graph data:', newData);
+  
     this.graphData = newData; 
    }
   

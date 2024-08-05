@@ -72,7 +72,7 @@ describe('AnalysisComponent', () => {
     const inputs = compiled.querySelectorAll('label');
     
     component.names.forEach((name,index) => {
-      expect(inputs[index].innerText).toBe(` ${name}`);
+      expect(inputs[index].innerText).toBe(name);
     })
 
 

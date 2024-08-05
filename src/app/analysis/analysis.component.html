@@ -2,9 +2,9 @@
     <mat-card class="drop-shadow-lg p-4 w-[30%] h-fit" >
             @for (name of names; track name) {
             <mat-divider></mat-divider>
-            <label class="duration-500 hover:bg-gray-200 has-[:checked]:bg-gray-300 has-[:checked]:font-semibold has-[:checked]:ring-black-800 w-[100%] py-[10px] pl-[10px]">
-                <input type="radio" [formControl] = 'select' class="appearance-none"  (click)="onSelection(name)" name="username" [value]="name"/>
-                {{name}}
+            <label class="flex ">
+                <input type="radio" [formControl] = 'select' class="peer hidden"  (click)="onSelection(name)" name="username" [value]="name"/>
+               <span class = 'duration-500 hover:bg-gray-200 peer-checked:bg-gray-300 peer-checked:font-semibold w-[100%] py-[10px] pl-[10px]'> {{name}} </span>
             </label>
         }
         <mat-divider></mat-divider>

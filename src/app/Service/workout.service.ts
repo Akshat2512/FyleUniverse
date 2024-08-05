@@ -68,8 +68,10 @@ export class WorkoutService {
         this.USER_DATA = JSON.parse(userData);
       }
     }
-    catch(e){}
-  console.log(this.USER_DATA)
+    catch(e){
+
+    }
+
     }
   
     
@@ -97,11 +99,12 @@ export class WorkoutService {
          if(i==this.USER_DATA.length)
          {
           this.USER_DATA.push({id: i+1, name: formData.name, workouts: [{type: formData.workout_type, minutes: formData.minutes}] })
-          // this.ScrollonSubmit() 
+
           alert('Submitted Successfully!!');
            
          }
-         else{
+         else
+         {
               var wo_len =  this.USER_DATA[i].workouts.length;
               let j;
               for(j=0;j<wo_len;j++)
@@ -118,7 +121,7 @@ export class WorkoutService {
               else{
                 this.USER_DATA[i].workouts[j].minutes = this.USER_DATA[i].workouts[j].minutes+ formData.minutes;
               }
-              // this.ScrollonSubmit()
+ 
               alert(`Updated Successfully !!`);
             
          }
@@ -224,7 +227,7 @@ options: string[] = ['All'];
   onSelectionChange(select: string[], name: string) {   // Function to modify Table data and Graph data based on selected option(s) and search 
 
    var selectedValues =  select;                                    // modify mat-select
-   console.log(selectedValues)
+
    
     this.compute_table();
     this.FilterWorkoutList = []
@@ -264,7 +267,7 @@ options: string[] = ['All'];
          return this.FilterWorkoutList ;
          
   }
-  
+
 //Graphs Analysis
 
 heading: string = '';
