@@ -39,7 +39,7 @@ constructor(public service:WorkoutService){
 }
 
 
- @Input() updateData!: CoTable[];  // To receive update graph data from search-form.component
+ @Input() updateData!: CoTable[];  // To receive updated graph data from search-form.component
                         
  ngOnChanges(changes: SimpleChanges) {    // detect changes in 'updateData' and then update graph
    if (changes['updateData'] && this.updateData[0]) {
@@ -54,7 +54,7 @@ constructor(public service:WorkoutService){
    }
 }
 
-onSelection(name: string){  // This function trigger when click on names list and display the graph associated with the name
+onSelection(name: string){  // This function trigger when click list of names and display the graph associated with the name
     this.service.handleListItemClick(this.updateData);
     this.service.SelectItemClick(name);
 
