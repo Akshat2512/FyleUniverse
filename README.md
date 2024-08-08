@@ -3,8 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
 ## Unit Tests Coverage Report
-
+The project has 100% code coverage for the specified component and service. For detailed coverage report, visit the following link: 
 [View Coverage Report](https://akshat2512.github.io/Fyleuniverse/coverage/fyleuniverse)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
