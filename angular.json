@@ -100,8 +100,17 @@
             "karmaConfig": "karma.conf.js",
             "codeCoverage": true
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "repo": "https://github.com/Akshat2512/Fyleuniverse.git"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
