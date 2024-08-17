@@ -104,7 +104,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "repo": "git@github.com:Akshat2512/Fyleuniverse.git"
+            "repo": "https://github.com/Akshat2512/Fyleuniverse.git"
           }
         }
       }
